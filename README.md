@@ -19,7 +19,7 @@
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
 <!-- RECENT_START -->
-| 2026-04-07 | [AI Agent 的持续学习：模型、运行框架与上下文三层](archive/ai-ml/20260407-continual-learning-for-ai-agents.md) | AI & 机器学习 |
+| 2026-04-07 | [Continual Learning for AI Agents](archive/ai-ml/20260407-continual-learning-for-ai-agents.md) | AI & 机器学习 |
 | 2026-04-07 | [A Taxonomy of RL Environments for LLM Agents](archive/ai-ml/20260407-llm-agent-强化学习环境分类.md) | AI & 机器学习 |
 <!-- RECENT_END -->
 
@@ -27,42 +27,11 @@
 
 在此项目目录内打开 Claude Code，使用 `/archive` 命令：
 
-### 归档网页文章 / 博客
-
-```
+```bash
 /archive --url https://example.com/article --notes "我的感悟和评论"
-```
-
-### 归档 PDF / 论文
-
-```
 /archive --pdf paper.pdf --notes "这篇论文的核心贡献是..."
-```
-
-### 可选参数
-
-| 参数 | 说明 |
-|------|------|
-| `--url` | 文章 URL（与 `--pdf` 二选一） |
-| `--pdf` | PDF 文件路径（与 `--url` 二选一） |
-| `--notes` | 你的个人笔记和感悟 |
-| `--category` | 强制指定分类（覆盖自动分类） |
-| `--push` | 归档完成后自动推送到远端 |
-
-### 示例
-
-```
-# 归档一篇技术博客
-/archive --url https://blog.example.com/system-design --notes "对分布式一致性分析很有启发"
-
-# 归档 ArXiv 论文
-/archive --pdf attention_is_all_you_need.pdf --notes "Transformer 架构的开山之作"
-
-# 强制指定分类
 /archive --url https://example.com/article --notes "..." --category technology
-
-# 归档后自动推送
 /archive --url https://example.com/article --notes "..." --push
 ```
 
-Claude 会自动完成：抓取或读取内容、分析生成摘要和标签、创建 Markdown、更新导航、执行校验并提交。默认不会自动推送。
+详细的标题规则、文章结构、标签、来源保真、资源与校验规范统一见 [CONTENT_STANDARDS.md](CONTENT_STANDARDS.md)。
