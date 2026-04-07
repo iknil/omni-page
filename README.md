@@ -20,7 +20,7 @@
 |------|----------|------|
 <!-- RECENT_START -->
 | 2026-04-07 | [AI Agent 的持续学习：模型、运行框架与上下文三层](archive/ai-ml/20260407-continual-learning-for-ai-agents.md) | AI & 机器学习 |
-| 2026-04-07 | [A Taxonomy of RL Environments for LLM Agents](archive/ai-ml/20260407-a-taxonomy-of-rl-environments-for-llm-agents.md) | AI & 机器学习 |
+| 2026-04-07 | [A Taxonomy of RL Environments for LLM Agents](archive/ai-ml/20260407-llm-agent-强化学习环境分类.md) | AI & 机器学习 |
 <!-- RECENT_END -->
 
 ## 使用方法
@@ -47,6 +47,7 @@
 | `--pdf` | PDF 文件路径（与 `--url` 二选一） |
 | `--notes` | 你的个人笔记和感悟 |
 | `--category` | 强制指定分类（覆盖自动分类） |
+| `--push` | 归档完成后自动推送到远端 |
 
 ### 示例
 
@@ -59,6 +60,9 @@
 
 # 强制指定分类
 /archive --url https://example.com/article --notes "..." --category technology
+
+# 归档后自动推送
+/archive --url https://example.com/article --notes "..." --push
 ```
 
-Claude 会自动完成：抓取/读取内容 → 分析生成摘要和标签 → 创建 Markdown → 更新导航 → 提交。
+Claude 会自动完成：抓取或读取内容、分析生成摘要和标签、创建 Markdown、更新导航、执行校验并提交。默认不会自动推送。

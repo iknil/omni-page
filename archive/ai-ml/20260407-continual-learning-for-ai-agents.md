@@ -9,7 +9,7 @@
 
 ## 核心内容摘要
 
-这篇文章把 AI Agent 的持续学习拆成三个清晰层次：模型、运行框架与上下文。作者指出，业界一提 continual learning 往往只想到更新模型权重，但对 agent 系统来说，真正可优化的对象远不止模型本身。模型层关注 SFT、RL 等训练方式，却面临灾难性遗忘等经典难题；运行框架层关注驱动 agent 的代码、内置指令与工具，可通过 traces 回放、评测和 coding agent 自动改写来持续改进；上下文层则对应位于框架外部的指令、技能与记忆，可按 agent、用户或组织多层级沉淀与更新。文章最后强调，traces 是三层学习机制共同的基础设施，决定了系统能否形成可持续演化的反馈闭环。
+这篇文章把 AI Agent 的持续学习拆成三个清晰层次：模型、运行框架与上下文。作者指出，业界一提 continual learning 往往只想到更新模型权重，但对 agent 系统来说，真正可以持续优化的对象远不止模型本身。模型层关注 SFT、RL 等权重更新方式，却面临灾难性遗忘等经典问题；运行框架层关注驱动 agent 的代码、内置指令与工具，可通过 traces 回放、评测和 coding agent 自动改写来持续改进；上下文层则对应框架外部的指令、技能与记忆，可按 agent、用户或组织多层级沉淀与更新。文章最后强调，traces 是三层学习机制共享的基础设施，决定系统能否形成真正持续演化的反馈闭环。
 
 ## 关键要点
 
@@ -32,7 +32,7 @@
 
 **图1 - Agent 持续学习三层分层图**
 
-![Agent 持续学习三层分层图](../../assets/20260407-agent-continual-learning-layers.png)
+![Agent 持续学习三层分层图](../../assets/20260407-continual-learning-layers.png)
 
 原图 URL：`https://storage.ghost.io/c/97/88/97889716-a759-46f4-b63f-4f5c46a13333/content/images/2026/04/Screenshot-2026-04-04-at-8.22.30---AM.png`
 
@@ -40,7 +40,7 @@
 
 **图2 - 三层持续学习方式对比图**
 
-![三层持续学习方式对比图](../../assets/20260407-agent-continual-learning-comparison.jpeg)
+![三层持续学习方式对比图](../../assets/20260407-continual-learning-comparison.jpeg)
 
 原图 URL：`https://storage.ghost.io/c/97/88/97889716-a759-46f4-b63f-4f5c46a13333/content/images/2026/04/e0f61fc1-9e93-4008-9042-c0551f05aeee.jpeg`
 
@@ -48,7 +48,7 @@
 
 ## 我的思考与感悟
 
-对于 agentic 的认知就应该是这 3 层，model、harness、context，万变不离其中。这三个需要找合适的中文表达。还要提取分层的图和对比的图。
+对于 agentic 的认知就应该是这三层：model、harness、context，万变不离其中。这三个需要找合适的中文表达，也值得在后续归档里继续保持一致。原文里的分层图和对比图都很关键，保留下来是对理解整篇文章最有帮助的部分。
 
 ---
 
