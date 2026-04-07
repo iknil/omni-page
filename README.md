@@ -23,23 +23,18 @@
 
 ## 使用方法
 
-### 环境准备
-
-```bash
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=your_key_here
-```
+在此项目目录内打开 Claude Code，使用 `/archive` 命令：
 
 ### 归档网页文章 / 博客
 
-```bash
-python add_article.py --url https://example.com/article --notes "我的感悟和评论"
+```
+/archive --url https://example.com/article --notes "我的感悟和评论"
 ```
 
 ### 归档 PDF / 论文
 
-```bash
-python add_article.py --pdf paper.pdf --notes "这篇论文的核心贡献是..."
+```
+/archive --pdf paper.pdf --notes "这篇论文的核心贡献是..."
 ```
 
 ### 可选参数
@@ -49,24 +44,19 @@ python add_article.py --pdf paper.pdf --notes "这篇论文的核心贡献是...
 | `--url` | 文章 URL（与 `--pdf` 二选一） |
 | `--pdf` | PDF 文件路径（与 `--url` 二选一） |
 | `--notes` | 你的个人笔记和感悟 |
-| `--category` | 强制指定分类（覆盖 AI 自动分类） |
+| `--category` | 强制指定分类（覆盖自动分类） |
 
 ### 示例
 
-```bash
+```
 # 归档一篇技术博客
-python add_article.py \
-  --url https://blog.example.com/system-design \
-  --notes "这篇文章对分布式系统的一致性分析很有启发"
+/archive --url https://blog.example.com/system-design --notes "对分布式一致性分析很有启发"
 
 # 归档 ArXiv 论文
-python add_article.py \
-  --pdf attention_is_all_you_need.pdf \
-  --notes "Transformer 架构的开山之作，Self-Attention 机制彻底改变了 NLP"
+/archive --pdf attention_is_all_you_need.pdf --notes "Transformer 架构的开山之作"
 
 # 强制指定分类
-python add_article.py \
-  --url https://example.com/article \
-  --notes "..." \
-  --category technology
+/archive --url https://example.com/article --notes "..." --category technology
 ```
+
+Claude 会自动完成：抓取/读取内容 → 分析生成摘要和标签 → 创建 Markdown → 更新导航 → 提交。
