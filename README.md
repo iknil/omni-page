@@ -6,7 +6,7 @@
 
 | 分类 | 描述 | 文章数 |
 |------|------|:------:|
-| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 0 |
+| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 1 |
 | [技术 & 编程](archive/technology/README.md) | 软件工程、系统设计、编程语言、开发工具 | 0 |
 | [科学 & 研究](archive/science/README.md) | 科学研究、学术论文、自然科学 | 0 |
 | [商业 & 经济](archive/business/README.md) | 商业分析、经济学、产品、管理 | 0 |
@@ -19,6 +19,7 @@
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
 <!-- RECENT_START -->
+| 2026-04-07 | [A Taxonomy of RL Environments for LLM Agents](archive/ai-ml/20260407-a-taxonomy-of-rl-environments-for-llm-agents.md) | AI & 机器学习 |
 <!-- RECENT_END -->
 
 ## 使用方法

@@ -15,8 +15,73 @@
 
 ### 第二步：获取文章内容
 
-- **URL**：用 WebFetch 工具抓取页面，提取正文
-- **PDF**：用 Read 工具读取文件内容
+#### 2-A：URL 模式
+
+用 Bash 执行以下命令抓取网页正文，**依次尝试**，成功即停：
+
+```bash
+# 尝试 1：带浏览器 UA 的 curl（应对大多数 403）
+curl -sL \
+  -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" \
+  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+  -H "Accept-Language: zh-CN,zh;q=0.9,en;q=0.8" \
+  --max-time 30 \
+  "<URL>" -o /tmp/archive_fetch.html
+
+# 检查是否成功（文件非空且含 HTML 内容）
+wc -c /tmp/archive_fetch.html
+```
+
+```bash
+# 尝试 2：通过 Jina Reader 代理
+curl -sL \
+  -H "User-Agent: Mozilla/5.0 (compatible)" \
+  --max-time 30 \
+  "https://r.jina.ai/<URL>" -o /tmp/archive_fetch.html
+```
+
+```bash
+# 尝试 3：通过 Google AMP Cache（适合部分博客）
+# 将 https://example.com/path 转换为
+# https://example-com.cdn.ampproject.org/v/s/example.com/path
+```
+
+拿到 HTML 后，用以下命令提取可读正文（过滤掉导航、广告、脚注等噪声）：
+
+```bash
+# 如果安装了 pandoc
+pandoc -f html -t plain /tmp/archive_fetch.html 2>/dev/null | head -500
+
+# 如果没有 pandoc，用 python
+python3 -c "
+import re, sys
+html = open('/tmp/archive_fetch.html').read()
+# 去除 script/style
+html = re.sub(r'<(script|style)[^>]*>.*?</\1>', '', html, flags=re.DOTALL|re.I)
+# 去除所有标签
+text = re.sub(r'<[^>]+>', ' ', html)
+# 压缩空白
+text = re.sub(r'\s+', ' ', text).strip()
+print(text[:8000])
+"
+
+# 同时提取所有图片 URL（用于后续嵌入）
+python3 -c "
+import re
+html = open('/tmp/archive_fetch.html').read()
+imgs = re.findall(r'<img[^>]+src=[\"\'](.*?)[\"\'|][^>]*>', html, re.I)
+alts = re.findall(r'<img[^>]+alt=[\"\'](.*?)[\"\'|][^>]*>', html, re.I)
+for i, src in enumerate(imgs):
+    alt = alts[i] if i < len(alts) else ''
+    print(f'IMG: {src}  ALT: {alt}')
+"
+```
+
+**同时**提取页面中所有 `<img>` 的 `src` 和 `alt`，以便后续在文章里引用重要图片。
+
+#### 2-B：PDF 模式
+
+用 Read 工具读取 PDF 文件内容。
 
 ### 第三步：分析文章
 
@@ -27,6 +92,10 @@
 **摘要**：200~300 字，概括文章核心观点和价值
 
 **关键要点**：3~6 条，提炼最重要的信息点
+
+**图片**：列出页面中与内容强相关的图片（尤其是用户笔记中提到的图），记录：
+- 图片原始 URL（绝对路径；若是相对路径则补全域名）
+- 图片的 alt 文字或推断出的说明
 
 **分类**（从下列选一个最合适的）：
 | key | 适用范围 |
@@ -69,6 +138,12 @@
 - <要点2>
 - <要点3>
 
+## 重要图示
+
+<!-- 若用户笔记中提到了特定图，或页面有与核心论点直接相关的图，在此嵌入 -->
+<!-- 格式：![说明文字](<图片绝对URL>) -->
+<!-- 若无相关图片则删除本节 -->
+
 ## 我的思考与感悟
 
 <用户笔记，若无则写"（暂无笔记）">
@@ -98,16 +173,23 @@
 
 ### 第七步：处理 PDF 文件
 
-如果是 PDF，将文件复制到 `assets/` 目录（若 assets/ 下已存在同名文件则跳过）。
+如果是 PDF，用 Bash 将文件复制到 `assets/` 目录：
 
-### 第八步：Git 提交
-
-用以下格式提交所有变更：
-
+```bash
+cp "<pdf-path>" assets/ 2>/dev/null || true   # 已存在时跳过
 ```
+
+### 第八步：Git 提交并推送
+
+```bash
+git add archive/ README.md assets/
+git commit -m "$(cat <<'COMMITMSG'
 归档：<文章标题>
 
 分类：<分类名>
 来源：<URL 或文件名>
 标签：<tag1>, <tag2>, ...
+COMMITMSG
+)"
+git push -u origin "$(git branch --show-current)"
 ```
