@@ -26,13 +26,19 @@
 
 ## 重要图示
 
-> 原文包含两张核心架构图，因站点访问限制无法直接嵌入，请访问原文查看：
-> 
-> **图1 — 基础 Agent Loop**：展示 Agent 在单次轨迹中与环境的观察（Observation）→ 行动（Action）→ 奖励（Reward）循环结构
->
-> **图2 — RL 训练部署架构**：展示 Trainer、模型推理服务器（Model Inference Server）、环境（Environment）作为三个独立进程，通过 API 相互通信的完整训练回路
->
-> 原文链接：[https://leehanchung.github.io/blogs/2026/03/21/rl-environments-for-llm-agents/](https://leehanchung.github.io/blogs/2026/03/21/rl-environments-for-llm-agents/)
+**图1 - 基础 Agent Loop**
+
+![基础 Agent Loop](../../assets/agent-loop-basic.png)
+
+展示 Agent 在单次轨迹中与环境的观察（Observation）-> 行动（Action）-> 奖励（Reward）循环结构。
+
+**图2 - RL 训练部署架构**
+
+![RL 训练部署架构](../../assets/agent-loop-training-architecture.png)
+
+展示 Trainer、模型推理服务器（Model Inference Server）、环境（Environment）作为三个独立进程，通过 API 相互通信的完整训练回路。
+
+原文链接：[https://leehanchung.github.io/blogs/2026/03/21/rl-environments-for-llm-agents/](https://leehanchung.github.io/blogs/2026/03/21/rl-environments-for-llm-agents/)
 
 ## 我的思考与感悟
 
