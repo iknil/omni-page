@@ -6,7 +6,7 @@
 
 | 分类 | 描述 | 文章数 |
 |------|------|:------:|
-| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 4 |
+| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 5 |
 | [技术 & 编程](archive/technology/README.md) | 软件工程、系统设计、编程语言、开发工具 | 0 |
 | [科学 & 研究](archive/science/README.md) | 科学研究、学术论文、自然科学 | 0 |
 | [商业 & 经济](archive/business/README.md) | 商业分析、经济学、产品、管理 | 0 |
@@ -19,6 +19,7 @@
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
 <!-- RECENT_START -->
+| 2026-04-08 | [大语言模型生成控制参数详解：温度、Top-K与Top-P](archive/ai-ml/20260408-llm-decoding-parameters.md) | AI & 机器学习 |
 | 2026-04-08 | [Context Window](archive/ai-ml/20260408-context-window.md) | AI & 机器学习 |
 | 2026-04-08 | [A Guide to Context Engineering for LLMs](archive/ai-ml/20260408-context-engineering-for-llms.md) | AI & 机器学习 |
 | 2026-04-07 | [Continual Learning for AI Agents](archive/ai-ml/20260407-continual-learning-for-ai-agents.md) | AI & 机器学习 |
