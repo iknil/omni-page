@@ -1,11 +1,11 @@
 # Omni Page — Agent 说明
 
-个人知识归档库，收录每天阅读的文章、博客和论文，结合个人思考。
+个人知识库，包含外部文章归档、个人灵感捕获，以及从灵感沉淀出来的知识点。
 
 ## 唯一规范入口
 
-归档规范、标题规则、来源保真、标签、资源管理统一以 [CONTENT_STANDARDS.md](CONTENT_STANDARDS.md) 为准。
-`.claude/commands/archive.md` 仅保留调用格式，避免重复维护正文规则。
+内容规范、标题规则、来源保真、标签、资源管理统一以 [CONTENT_STANDARDS.md](CONTENT_STANDARDS.md) 为准。
+`.claude/commands/` 只保留调用格式，避免重复维护正文规则。
 
 ## 目录结构
 
@@ -16,6 +16,8 @@ omni-page/
 ├── AGENTS.md              # 本文件（Codex 用）
 ├── CLAUDE.md              # Claude Code 用
 ├── assets/                # 图片和 PDF 统一存放处
+├── inspirations/          # 个人灵感速记与素材卡片
+├── knowledge/             # 从灵感或文章沉淀出的知识点
 ├── scripts/               # 校验脚本
 └── archive/
     ├── ai-ml/
@@ -27,7 +29,19 @@ omni-page/
     └── misc/
 ```
 
-## 归档任务说明
+## 内容流说明
+
+- `archive/`：外部文章、博客、论文的结构化归档。
+- `inspirations/`：随手记录的一段话、一张图，或图文混合灵感。
+- `knowledge/`：从 `inspirations/` 或 `archive/` 提炼出的可复用知识点。
+
+推荐流程：
+
+1. 先用 `/inspire` 捕获灵感，不要求一次写全。
+2. 当灵感成熟后，用 `/distill` 将其沉淀为 `knowledge/` 下的知识点。
+3. 遇到外部资料时继续用 `/archive` 归档，并在需要时关联到知识点。
+
+## 文章归档任务说明
 
 - 标题保留英文原标题；中文副标题按需补充。
 - 文件名统一为 `archive/<category>/YYYYMMDD-slug.md`。
@@ -41,3 +55,4 @@ omni-page/
 - 主 `README.md` 的 `<!-- RECENT_START -->` / `<!-- RECENT_END -->` 之间最多保留 20 篇，最新在最前。
 - 分类 `README.md` 在 `<!-- ARTICLES_END -->` 前追加索引行，格式为 `| YYYY-MM-DD | [标题](文件名.md) |`。
 - 分类表格文章数必须与实际文件数一致。
+- `inspirations/README.md` 与 `knowledge/README.md` 也需要维护最新索引，最新在最前。

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420">
+  <rect width="860" height="420" fill="#f4efe6"/>
+  <rect x="40" y="60" width="220" height="130" rx="18" fill="#ffffff" stroke="#1f3a5f" stroke-width="3"/>
+  <rect x="320" y="60" width="220" height="130" rx="18" fill="#fff6dd" stroke="#a46a00" stroke-width="3"/>
+  <rect x="600" y="60" width="220" height="130" rx="18" fill="#e7f4ec" stroke="#23603b" stroke-width="3"/>
+  <rect x="320" y="250" width="220" height="110" rx="18" fill="#fbe8e8" stroke="#8a2d2d" stroke-width="3"/>
+  <text x="150" y="115" font-size="26" text-anchor="middle" fill="#1f3a5f" font-family="Helvetica, Arial, sans-serif">瞬时输入</text>
+  <text x="150" y="150" font-size="18" text-anchor="middle" fill="#1f3a5f" font-family="Helvetica, Arial, sans-serif">一句话 / 截图 / 草图</text>
+  <text x="430" y="115" font-size="26" text-anchor="middle" fill="#7a4e00" font-family="Helvetica, Arial, sans-serif">灵感卡片</text>
+  <text x="430" y="150" font-size="18" text-anchor="middle" fill="#7a4e00" font-family="Helvetica, Arial, sans-serif">captured / distilling</text>
+  <text x="710" y="115" font-size="26" text-anchor="middle" fill="#23603b" font-family="Helvetica, Arial, sans-serif">知识点</text>
+  <text x="710" y="150" font-size="18" text-anchor="middle" fill="#23603b" font-family="Helvetica, Arial, sans-serif">stable / reusable</text>
+  <text x="430" y="295" font-size="26" text-anchor="middle" fill="#8a2d2d" font-family="Helvetica, Arial, sans-serif">归档文章</text>
+  <text x="430" y="328" font-size="18" text-anchor="middle" fill="#8a2d2d" font-family="Helvetica, Arial, sans-serif">外部材料与论据</text>
+  <path d="M260 125 L320 125" fill="none" stroke="#1f3a5f" stroke-width="4"/>
+  <path d="M300 112 L320 125 L300 138" fill="none" stroke="#1f3a5f" stroke-width="4"/>
+  <path d="M540 125 L600 125" fill="none" stroke="#23603b" stroke-width="4"/>
+  <path d="M580 112 L600 125 L580 138" fill="none" stroke="#23603b" stroke-width="4"/>
+  <path d="M430 190 L430 250" fill="none" stroke="#8a2d2d" stroke-width="4"/>
+  <path d="M417 230 L430 250 L443 230" fill="none" stroke="#8a2d2d" stroke-width="4"/>
+</svg>
