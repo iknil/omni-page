@@ -7,7 +7,7 @@
 | 空间 | 说明 | 数量 |
 |------|------|:----:|
 | [文章归档](archive/ai-ml/README.md) | 来自文章、博客、论文的结构化归档 | 5 |
-| [个人灵感](inspirations/README.md) | 一段话、一张图、或图文混合的低摩擦记录 | 1 |
+| [个人灵感](inspirations/README.md) | 一段话、一张图、或图文混合的低摩擦记录 | 2 |
 | [知识点](knowledge/README.md) | 从灵感或归档提炼出的可复用结论 | 1 |
 
 ## 知识分类
@@ -39,6 +39,7 @@
 <!-- INSPIRATION_START -->
 | 日期 | 灵感标题 | 类型 |
 |------|----------|------|
+| 2026-04-08 | [harness 架构图](inspirations/20260408-harness-architecture-diagram.md) | image |
 | 2026-04-08 | [上下文卡片化捕获流程](inspirations/20260408-context-card-capture.md) | mixed |
 <!-- INSPIRATION_END -->
 

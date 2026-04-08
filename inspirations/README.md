@@ -4,6 +4,7 @@
 
 | 日期 | 灵感 | 类型 |
 |------|------|------|
+| 2026-04-08 | [harness 架构图](20260408-harness-architecture-diagram.md) | image |
 | 2026-04-08 | [上下文卡片化捕获流程](20260408-context-card-capture.md) | mixed |
 <!-- INSPIRATIONS_END -->
 
