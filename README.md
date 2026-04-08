@@ -16,9 +16,9 @@
 
 ## 最近归档
 
+<!-- RECENT_START -->
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
-<!-- RECENT_START -->
 | 2026-04-08 | [大语言模型生成控制参数详解：温度、Top-K与Top-P](archive/ai-ml/20260408-llm-decoding-parameters.md) | AI & 机器学习 |
 | 2026-04-08 | [Context Window](archive/ai-ml/20260408-context-window.md) | AI & 机器学习 |
 | 2026-04-08 | [A Guide to Context Engineering for LLMs](archive/ai-ml/20260408-context-engineering-for-llms.md) | AI & 机器学习 |
