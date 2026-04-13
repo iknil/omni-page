@@ -6,7 +6,7 @@
 
 | 空间 | 说明 | 数量 |
 |------|------|:----:|
-| [文章归档](archive/ai-ml/README.md) | 来自文章、博客、论文的结构化归档 | 5 |
+| [文章归档](archive/ai-ml/README.md) | 来自文章、博客、论文的结构化归档 | 6 |
 | [个人灵感](inspirations/README.md) | 一段话、一张图、或图文混合的低摩擦记录 | 2 |
 | [知识点](knowledge/README.md) | 从灵感或归档提炼出的可复用结论 | 1 |
 
@@ -27,6 +27,7 @@
 <!-- RECENT_START -->
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
+| 2026-04-13 | [Post-training Core Technologies Explained: From SFT to RLHF, GRPO, and Agentic RL](archive/ai-ml/20260413-rlhf-grpo-agentic-rl.md) | AI & 机器学习 |
 | 2026-04-08 | [大语言模型生成控制参数详解：温度、Top-K与Top-P](archive/ai-ml/20260408-llm-decoding-parameters.md) | AI & 机器学习 |
 | 2026-04-08 | [Context Window](archive/ai-ml/20260408-context-window.md) | AI & 机器学习 |
 | 2026-04-08 | [A Guide to Context Engineering for LLMs](archive/ai-ml/20260408-context-engineering-for-llms.md) | AI & 机器学习 |
