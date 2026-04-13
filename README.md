@@ -40,8 +40,8 @@
 <!-- INSPIRATION_START -->
 | 日期 | 灵感标题 | 类型 |
 |------|----------|------|
-| 2026-04-08 | [harness 架构图](inspirations/20260408-harness-architecture-diagram.md) | image |
 | 2026-04-08 | [上下文卡片化捕获流程](inspirations/20260408-context-card-capture.md) | mixed |
+| 2026-04-08 | [harness 架构图](inspirations/20260408-harness-architecture-diagram.md) | image |
 <!-- INSPIRATION_END -->
 
 ## 最近知识点

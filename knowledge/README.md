@@ -5,6 +5,7 @@
 | 日期 | 知识点 | 状态 |
 |------|--------|------|
 | 2026-04-08 | [上下文先卡片化，再知识化](20260408-context-card-knowledge-loop.md) | seed |
+| 2026-04-08 | [上下文先卡片化，再知识化](20260408-context-card-knowledge-loop.md) | seed |
 <!-- KNOWLEDGE_END -->
 
 [← 返回首页](../README.md)
