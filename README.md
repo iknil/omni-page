@@ -6,7 +6,7 @@
 
 | 空间 | 说明 | 数量 |
 |------|------|:----:|
-| [文章归档](archive/ai-ml/README.md) | 来自文章、博客、论文的结构化归档 | 6 |
+| [文章归档](archive/ai-ml/README.md) | 来自文章、博客、论文的结构化归档 | 7 |
 | [个人灵感](inspirations/README.md) | 一段话、一张图、或图文混合的低摩擦记录 | 2 |
 | [知识点](knowledge/README.md) | 从灵感或归档提炼出的可复用结论 | 1 |
 
@@ -14,7 +14,7 @@
 
 | 分类 | 描述 | 文章数 |
 |------|------|:------:|
-| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 6 |
+| [AI & 机器学习](archive/ai-ml/README.md) | 人工智能、深度学习、大模型、AI 应用 | 7 |
 | [技术 & 编程](archive/technology/README.md) | 软件工程、系统设计、编程语言、开发工具 | 0 |
 | [科学 & 研究](archive/science/README.md) | 科学研究、学术论文、自然科学 | 0 |
 | [商业 & 经济](archive/business/README.md) | 商业分析、经济学、产品、管理 | 0 |
@@ -27,6 +27,7 @@
 <!-- RECENT_START -->
 | 日期 | 文章标题 | 分类 |
 |------|----------|------|
+| 2026-04-09 | [Let Skills Evolve Collectively with Agentic Evolver](archive/ai-ml/20260409-skillclaw-evolution.md) | AI & 机器学习 |
 | 2026-04-13 | [Post-training Core Technologies Explained: From SFT to RLHF, GRPO, and Agentic RL](archive/ai-ml/20260413-rlhf-grpo-agentic-rl.md) | AI & 机器学习 |
 | 2026-04-08 | [大语言模型生成控制参数详解：温度、Top-K与Top-P](archive/ai-ml/20260408-llm-decoding-parameters.md) | AI & 机器学习 |
 | 2026-04-08 | [Context Window](archive/ai-ml/20260408-context-window.md) | AI & 机器学习 |
