@@ -133,6 +133,10 @@ for i in "${!categories[@]}"; do
     "分类 README archive/$category/README.md" \
     "$category_dir" \
     '/^\| [0-9]{4}-[0-9]{2}-[0-9]{2} \| \[.*\]\(.*\.md\) \|$/{line=$0; sub(/^.*\]\(/, "", line); sub(/\) \|$/, "", line); print line}'
+
+  if ! grep -qE '^\| ---- \| ---- \|$' "$category_readme"; then
+    echo_err "分类 README 缺少表格分隔行: archive/$category/README.md"
+  fi
 done
 
 check_index_readme \
